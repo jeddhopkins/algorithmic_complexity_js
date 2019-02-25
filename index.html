@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script src="plotly-latest.min.js"></script>
+    <script src="./test_timing_algorithms/src/array_generator.js"></script>
+    <script src="./test_timing_algorithms/src/functions.js"></script>
+    <script src="./test_timing_algorithms/src/timer.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <div id="tester" style="width:1000px;height:500px;"></div>
+  </body>
+  <script>
+
+    var graph = { x: [], y: [] }
+
+    for (var i = 0; i < 15000000; i+= 30000) {
+      graph.y.push(Timer.prototype.timer(reversing, generateArray(i)))
+      graph.x.push(i)
+    };
+
+    var layout = {
+      title: 'Reversing Method',
+      xaxis: {
+        title: 'Array Length (objects)',
+        showgrid: false,
+        zeroline: false
+      },
+      yaxis: {
+        title: 'Processing Time (ms)',
+        showline: false
+      }
+    };
+
+
+  	TESTER = document.getElementById('tester');
+  	Plotly.plot( TESTER, [graph], layout, {
+  	margin: { t: 0 } } );
+  </script>
+</html>
