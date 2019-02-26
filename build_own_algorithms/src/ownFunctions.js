@@ -1,5 +1,5 @@
-function last() {
-
+function last(arr) {
+ return arr.splice(-1)[0]
 }
 
 function last2() {
