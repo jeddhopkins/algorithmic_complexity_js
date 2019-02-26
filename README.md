@@ -4,7 +4,7 @@
 ![big_o_notation_graph](https://user-images.githubusercontent.com/44780483/53408265-014a7a00-39b6-11e9-91bd-1b60fb0b2e55.jpeg)
 
 
-> This repo is designed to only measure the __processing time taken__ of some well known functions.
+> This repo is designed to only measure the __processing time taken__ of some well known functions.      
 
 ## Initial 4 Benchmark Functions:
 ### The last() Function
