@@ -1,9 +1,11 @@
+var newArr = [];
+
 function last(arr) {
- return arr.splice(-1)[0]
+  return arr.splice(-1)[0];
 }
 
-function last2() {
-
+function last2(arr) {
+  return arr[arr.length - 1];
 }
 
 function reverse() {

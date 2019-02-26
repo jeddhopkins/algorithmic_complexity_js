@@ -10,3 +10,16 @@ describe('last', function() {
     expect(last(['hello', 22, null, true])).toEqual(true);
   });
 });
+
+describe('last2', function() {
+
+  it('expect [1, 8, 33, 1, 58, 20] to return [20]', function() {
+    expect(last2([1, 8, 33, 1, 58, 20])).toEqual(20);
+  });
+  it('expect [a, b, c] to return [c]', function() {
+    expect(last2(['a', 'b', 'c'])).toEqual('c');
+  });
+  it('expect [hello, 22, null, true] to return [true]', function() {
+    expect(last2(['hello', 22, null, true])).toEqual(true);
+  });
+});
