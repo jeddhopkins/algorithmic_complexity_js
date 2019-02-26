@@ -33,3 +33,15 @@ describe('sorting', function() {
     expect(sorting(['e', 'd', 'c', 'b', 'a'])).toEqual(['a', 'b', 'c', 'd', 'e'])
   });
 });
+
+describe('shuffle', function() {
+
+  it('expects [1, 2, 3, 4] to be a shuffled variation', function() {
+    spyOn(Math, 'random').and.returnValue(0.1);
+    expect(shuffle([1, 2, 3, 4])).toEqual([2, 3, 4, 1]);
+  });
+  it('expects [11, 22, 33, 44, 55, 66] to be a shuffled variation', function() {
+    spyOn(Math, 'random').and.returnValue(0.4);
+    expect(shuffle([11, 22, 33, 44, 55, 66])).toEqual([55, 11, 44, 22, 66, 33]);
+  });
+})

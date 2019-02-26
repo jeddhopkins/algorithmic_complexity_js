@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <script src="plotly-latest.min.js"></script>
-    <script src="./test_timing_algorithms/src/array_generator.js"></script>
+    <script src="./test_timing_algorithms/src/arrayGenerator.js"></script>
     <script src="./test_timing_algorithms/src/functions.js"></script>
     <script src="./test_timing_algorithms/src/timer.js"></script>
     <title></title>
@@ -14,13 +14,13 @@
 
     var graph = { x: [], y: [] }
 
-    for (var i = 0; i < 15000000; i+= 30000) {
-      graph.y.push(Timer.prototype.timer(reversing, generateArray(i)))
+    for (var i = 0; i < 5000000; i+= 50000) {
+      graph.y.push(Timer.prototype.timer(shuffle, generateArray(i)))
       graph.x.push(i)
     };
 
     var layout = {
-      title: 'Reversing Method',
+      title: 'Shuffling Method',
       xaxis: {
         title: 'Array Length (objects)',
         showgrid: false,
