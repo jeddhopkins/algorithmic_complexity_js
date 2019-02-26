@@ -12,24 +12,24 @@
   </body>
   <script>
 
-    var graph = { x: [], y: [], name: 'last()' }
-
-    for (var i = 0; i < 5000000; i+= 50000) {
-      graph.y.push(Timer.prototype.timer(last, generateArray(i)))
-      graph.x.push(i)
-    };
-
-    // var graph2 = { x: [], y: [], name: 'reversing()' }
+    // var graph = { x: [], y: [], name: 'last()' }
     //
     // for (var i = 0; i < 5000000; i+= 50000) {
-    //   graph2.y.push(Timer.prototype.timer(reversing, generateArray(i)))
-    //   graph2.x.push(i)
+    //   graph.y.push(Timer.prototype.timer(last, generateArray(i)))
+    //   graph.x.push(i)
     // };
     //
-    // var graph3 = { x: [], y: [], name: 'sorting()' }
+    var graph2 = { x: [], y: [], name: 'reverse2()' }
+
+    for (var i = 0; i < 1000000; i+= 10000) {
+      graph2.y.push(Timer.prototype.timer(reverse2, generateArray(i)))
+      graph2.x.push(i)
+    };
+    //
+    // var graph3 = { x: [], y: [], name: 'last3()' }
     //
     // for (var i = 0; i < 5000000; i+= 50000) {
-    //   graph3.y.push(Timer.prototype.timer(sorting, generateArray(i)))
+    //   graph3.y.push(Timer.prototype.timer(last3, generateArray(i)))
     //   graph3.x.push(i)
     // };
     //
@@ -41,7 +41,7 @@
     // };
 
     var layout = {
-      title: 'All Functions',
+      title: 'Comparing last(), last2(), last3() Functions',
       xaxis: {
         title: 'Array Length (objects)',
         showgrid: false,
@@ -54,12 +54,12 @@
     };
 
 
-  	TESTER = document.getElementById('tester');
-  	Plotly.plot( TESTER, [graph], layout, {
-  	margin: { t: 0 } } );
   	// TESTER = document.getElementById('tester');
-  	// Plotly.plot( TESTER, [graph2], layout, {
+  	// Plotly.plot( TESTER, [graph], layout, {
   	// margin: { t: 0 } } );
+  	TESTER = document.getElementById('tester');
+  	Plotly.plot( TESTER, [graph2], layout, {
+  	margin: { t: 0 } } );
   	// TESTER = document.getElementById('tester');
   	// Plotly.plot( TESTER, [graph3], layout, {
   	// margin: { t: 0 } } );
