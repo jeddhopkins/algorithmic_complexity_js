@@ -12,15 +12,36 @@
   </body>
   <script>
 
-    var graph = { x: [], y: [] }
+    var graph = { x: [], y: [], name: 'last()' }
 
     for (var i = 0; i < 5000000; i+= 50000) {
-      graph.y.push(Timer.prototype.timer(shuffle, generateArray(i)))
+      graph.y.push(Timer.prototype.timer(last, generateArray(i)))
       graph.x.push(i)
     };
 
+    var graph2 = { x: [], y: [], name: 'reversing()' }
+
+    for (var i = 0; i < 5000000; i+= 50000) {
+      graph2.y.push(Timer.prototype.timer(reversing, generateArray(i)))
+      graph2.x.push(i)
+    };
+
+    var graph3 = { x: [], y: [], name: 'sorting()' }
+
+    for (var i = 0; i < 5000000; i+= 50000) {
+      graph3.y.push(Timer.prototype.timer(sorting, generateArray(i)))
+      graph3.x.push(i)
+    };
+
+    var graph4 = { x: [], y: [], name: 'shuffle()' }
+
+    for (var i = 0; i < 5000000; i+= 50000) {
+      graph4.y.push(Timer.prototype.timer(shuffle, generateArray(i)))
+      graph4.x.push(i)
+    };
+
     var layout = {
-      title: 'Shuffling Method',
+      title: 'All Functions',
       xaxis: {
         title: 'Array Length (objects)',
         showgrid: false,
@@ -35,6 +56,15 @@
 
   	TESTER = document.getElementById('tester');
   	Plotly.plot( TESTER, [graph], layout, {
+  	margin: { t: 0 } } );
+  	TESTER = document.getElementById('tester');
+  	Plotly.plot( TESTER, [graph2], layout, {
+  	margin: { t: 0 } } );
+  	TESTER = document.getElementById('tester');
+  	Plotly.plot( TESTER, [graph3], layout, {
+  	margin: { t: 0 } } );
+  	TESTER = document.getElementById('tester');
+  	Plotly.plot( TESTER, [graph4], layout, {
   	margin: { t: 0 } } );
   </script>
 </html>
