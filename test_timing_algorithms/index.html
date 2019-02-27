@@ -12,42 +12,70 @@
   </body>
   <script>
 
+    var maxArraySize = 4000000
+    var increments = 100000
+    var repetitions = 10
     var graph = { x: [], y: [], name: 'reversing()' }
-
-    for (var i = 0; i < 4000000; i+= 100000) {
+    for (var i = 0; i < maxArraySize; i+= increments) {
       graph.y.push(Timer.prototype.timer(reversing, generateArray(i)))
       graph.x.push(i)
     };
-    // for (var e = 0; e < (20 - 1); e++) {
-    //    for (var i = 0; i < 4000000; i += 50000) {
-    //      graph.y[i/50000] += Timer.prototype.timer(reversing, generateArray(i));
-    //    };
-    //  };
-    //  for (var i = 0; i < graph.y.length; i ++) {
-    //    var t = graph.y[i]
-    //    graph.y[i] = t/20
-    //  };
-    //
-    // var graph2 = { x: [], y: [], name: 'reversing2()' }
-    //
-    // for (var i = 0; i < 4000000; i+= 50000) {
-    //   graph2.y.push(Timer.prototype.timer(reversing2, generateArray(i)))
-    //   graph2.x.push(i)
-    // };
-    //
-    // var graph3 = { x: [], y: [], name: 'reversing3()' }
-    //
-    // for (var i = 0; i < 4000000; i+= 50000) {
-    //   graph3.y.push(Timer.prototype.timer(reversing3, generateArray(i)))
-    //   graph3.x.push(i)
-    // };
-    //
-    // var graph4 = { x: [], y: [], name: 'reversing4()' }
-    //
-    // for (var i = 0; i < 4000000; i+= 50000) {
-    //   graph4.y.push(Timer.prototype.timer(reversing4, generateArray(i)))
-    //   graph4.x.push(i)
-    // };
+    for (var e = 0; e < (repetitions - 1); e++) {
+       for (var i = 0; i < maxArraySize; i += increments) {
+         graph.y[i/increments] += Timer.prototype.timer(reversing, generateArray(i));
+       };
+     };
+     for (var i = 0; i < graph.y.length; i ++) {
+       var t = graph.y[i]
+       graph.y[i] = t/repetitions
+     };
+
+    var graph2 = { x: [], y: [], name: 'reversing2()' }
+    for (var i = 0; i < maxArraySize; i+= increments) {
+      graph2.y.push(Timer.prototype.timer(reversing2, generateArray(i)))
+      graph2.x.push(i)
+    };
+    for (var e = 0; e < (repetitions - 1); e++) {
+       for (var i = 0; i < maxArraySize; i += increments) {
+         graph2.y[i/increments] += Timer.prototype.timer(reversing2, generateArray(i));
+       };
+     };
+     for (var i = 0; i < graph2.y.length; i ++) {
+       var t = graph2.y[i]
+       graph2.y[i] = t/repetitions
+     };
+
+
+    var graph3 = { x: [], y: [], name: 'reversing3()' }
+    for (var i = 0; i < maxArraySize; i+= increments) {
+      graph3.y.push(Timer.prototype.timer(reversing3, generateArray(i)))
+      graph3.x.push(i)
+    };
+    for (var e = 0; e < (repetitions - 1); e++) {
+       for (var i = 0; i < maxArraySize; i += increments) {
+         graph3.y[i/increments] += Timer.prototype.timer(reversing3, generateArray(i));
+       };
+     };
+     for (var i = 0; i < graph3.y.length; i ++) {
+       var t = graph3.y[i]
+       graph3.y[i] = t/repetitions
+     };
+
+    var graph4 = { x: [], y: [], name: 'reversing4()' }
+    for (var i = 0; i < maxArraySize; i+= increments) {
+      graph4.y.push(Timer.prototype.timer(reversing4, generateArray(i)))
+      graph4.x.push(i)
+    };
+    for (var e = 0; e < (repetitions - 1); e++) {
+       for (var i = 0; i < maxArraySize; i += increments) {
+         graph4.y[i/increments] += Timer.prototype.timer(reversing4, generateArray(i));
+       };
+     };
+     for (var i = 0; i < graph4.y.length; i ++) {
+       var t = graph4.y[i]
+       graph4.y[i] = t/repetitions
+     };
+
 
     var layout = {
       title: 'Reversing Functions',
@@ -66,14 +94,14 @@
   	TESTER = document.getElementById('tester');
   	Plotly.plot( TESTER, [graph], layout, {
   	margin: { t: 0 } } );
-  	// TESTER = document.getElementById('tester');
-  	// Plotly.plot( TESTER, [graph2], layout, {
-  	// margin: { t: 0 } } );
-  	// TESTER = document.getElementById('tester');
-  	// Plotly.plot( TESTER, [graph3], layout, {
-  	// margin: { t: 0 } } );
-  	// TESTER = document.getElementById('tester');
-  	// Plotly.plot( TESTER, [graph4], layout, {
-  	// margin: { t: 0 } } );
+  	TESTER = document.getElementById('tester');
+  	Plotly.plot( TESTER, [graph2], layout, {
+  	margin: { t: 0 } } );
+  	TESTER = document.getElementById('tester');
+  	Plotly.plot( TESTER, [graph3], layout, {
+  	margin: { t: 0 } } );
+  	TESTER = document.getElementById('tester');
+  	Plotly.plot( TESTER, [graph4], layout, {
+  	margin: { t: 0 } } );
   </script>
 </html>
