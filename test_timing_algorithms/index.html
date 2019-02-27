@@ -12,36 +12,36 @@
   </body>
   <script>
 
-    var graph = { x: [], y: [], name: 'last()' }
+    var graph = { x: [], y: [], name: 'reversing()' }
 
     for (var i = 0; i < 5000000; i+= 50000) {
-      graph.y.push(Timer.prototype.timer(last, generateArray(i)))
+      graph.y.push(Timer.prototype.timer(reversing, generateArray(i)))
       graph.x.push(i)
     };
 
-    // var graph2 = { x: [], y: [], name: 'reversing()' }
+    // var graph2 = { x: [], y: [], name: 'reversing2()' }
     //
     // for (var i = 0; i < 5000000; i+= 50000) {
-    //   graph2.y.push(Timer.prototype.timer(reversing, generateArray(i)))
+    //   graph2.y.push(Timer.prototype.timer(reversing2, generateArray(i)))
     //   graph2.x.push(i)
     // };
     //
-    // var graph3 = { x: [], y: [], name: 'sorting()' }
+    // var graph3 = { x: [], y: [], name: 'reversing3()' }
     //
     // for (var i = 0; i < 5000000; i+= 50000) {
-    //   graph3.y.push(Timer.prototype.timer(sorting, generateArray(i)))
+    //   graph3.y.push(Timer.prototype.timer(reversing3, generateArray(i)))
     //   graph3.x.push(i)
     // };
     //
-    // var graph4 = { x: [], y: [], name: 'shuffle()' }
+    // var graph4 = { x: [], y: [], name: 'reversing4()' }
     //
     // for (var i = 0; i < 5000000; i+= 50000) {
-    //   graph4.y.push(Timer.prototype.timer(shuffle, generateArray(i)))
+    //   graph4.y.push(Timer.prototype.timer(reversing4, generateArray(i)))
     //   graph4.x.push(i)
     // };
 
     var layout = {
-      title: 'All Functions',
+      title: 'Reversing Functions',
       xaxis: {
         title: 'Array Length (objects)',
         showgrid: false,

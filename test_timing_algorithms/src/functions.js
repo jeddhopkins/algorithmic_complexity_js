@@ -14,17 +14,40 @@ function reversing(arr) {
   return arr.reverse();
 };
 
-function reverse2(arr) {
+function reversing2(arr) {
   var newArr = [];
-  for (var i = arr.length - 1; i > 0; i--) {
+  for (var i = arr.length - 1; i >= 0; i--) {
     newArr.push(arr[i]);
   }
   return newArr;
 }
 
+function reversing3(arr) {
+  var j = arr.length - 1
+  for (var i = 0; i < arr.length; i++) {
+    if (i === j) {
+      break
+    }
+    var obj = arr[i]
+    arr[i] = arr[j]
+    arr[j] = obj
+    j--
+  }
+  return arr
+}
+
+function reversing4(arr) {
+  var newArr = [];
+  while (arr.length) {
+    newArr.push(arr.pop());
+  }
+  return newArr
+}
+
 function sorting(arr) {
   return arr.sort();
 };
+
 
 function shuffle(arr) {
   var j, x, i;

@@ -51,6 +51,45 @@ describe('All Functions', function() {
     });
   });
 
+  describe('reversing2', function() {
+
+    it('expects [1, 2, 3, 4, 5] to equal [5, 4, 3, 2, 1]', function() {
+      expect(reversing2([1, 2, 3, 4, 5])).toEqual([5, 4, 3, 2, 1])
+    });
+    it('expects [a, b, c, d, e] to equal [e, d, c, b, a]', function() {
+      expect(reversing2(['a', 'b', 'c', 'd', 'e'])).toEqual(['e', 'd', 'c', 'b', 'a'])
+    });
+    it('expects [22, null, hi] to equal [hi, null, 22]', function() {
+      expect(reversing2([22, null, 'hi'])).toEqual(['hi', null, 22])
+    });
+  });
+
+  describe('reversing3', function() {
+
+    it('expects [1, 2, 3, 4, 5] to equal [5, 4, 3, 2, 1]', function() {
+      expect(reversing3([1, 2, 3, 4, 5])).toEqual([5, 4, 3, 2, 1])
+    });
+    it('expects [a, b, c, d, e] to equal [e, d, c, b, a]', function() {
+      expect(reversing3(['a', 'b', 'c', 'd', 'e'])).toEqual(['e', 'd', 'c', 'b', 'a'])
+    });
+    it('expects [22, null, hi] to equal [hi, null, 22]', function() {
+      expect(reversing3([22, null, 'hi'])).toEqual(['hi', null, 22])
+    });
+  });
+
+  describe('reversing4', function() {
+
+    it('expects [1, 2, 3, 4, 5] to equal [5, 4, 3, 2, 1]', function() {
+      expect(reversing4([1, 2, 3, 4, 5])).toEqual([5, 4, 3, 2, 1])
+    });
+    it('expects [a, b, c, d, e] to equal [e, d, c, b, a]', function() {
+      expect(reversing4(['a', 'b', 'c', 'd', 'e'])).toEqual(['e', 'd', 'c', 'b', 'a'])
+    });
+    it('expects [22, null, hi] to equal [hi, null, 22]', function() {
+      expect(reversing4([22, null, 'hi'])).toEqual(['hi', null, 22])
+    });
+  });
+
   describe('sorting', function() {
 
     it('expects [4, 3, 1] to equal [1, 3, 4]', function() {
