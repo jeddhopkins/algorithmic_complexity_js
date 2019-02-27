@@ -14,28 +14,37 @@
 
     var graph = { x: [], y: [], name: 'reversing()' }
 
-    for (var i = 0; i < 5000000; i+= 50000) {
+    for (var i = 0; i < 4000000; i+= 100000) {
       graph.y.push(Timer.prototype.timer(reversing, generateArray(i)))
       graph.x.push(i)
     };
-
+    // for (var e = 0; e < (20 - 1); e++) {
+    //    for (var i = 0; i < 4000000; i += 50000) {
+    //      graph.y[i/50000] += Timer.prototype.timer(reversing, generateArray(i));
+    //    };
+    //  };
+    //  for (var i = 0; i < graph.y.length; i ++) {
+    //    var t = graph.y[i]
+    //    graph.y[i] = t/20
+    //  };
+    //
     // var graph2 = { x: [], y: [], name: 'reversing2()' }
     //
-    // for (var i = 0; i < 5000000; i+= 50000) {
+    // for (var i = 0; i < 4000000; i+= 50000) {
     //   graph2.y.push(Timer.prototype.timer(reversing2, generateArray(i)))
     //   graph2.x.push(i)
     // };
     //
     // var graph3 = { x: [], y: [], name: 'reversing3()' }
     //
-    // for (var i = 0; i < 5000000; i+= 50000) {
+    // for (var i = 0; i < 4000000; i+= 50000) {
     //   graph3.y.push(Timer.prototype.timer(reversing3, generateArray(i)))
     //   graph3.x.push(i)
     // };
     //
     // var graph4 = { x: [], y: [], name: 'reversing4()' }
     //
-    // for (var i = 0; i < 5000000; i+= 50000) {
+    // for (var i = 0; i < 4000000; i+= 50000) {
     //   graph4.y.push(Timer.prototype.timer(reversing4, generateArray(i)))
     //   graph4.x.push(i)
     // };
