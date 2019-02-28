@@ -14,15 +14,16 @@
 
     var maxArraySize = 4000000
     var increments = 100000
-    var repetitions = 10
+    var repetitions = 3
+
     var graph = { x: [], y: [], name: 'reversing()' }
     for (var i = 0; i < maxArraySize; i+= increments) {
-      graph.y.push(Timer.prototype.timer(reversing, generateArray(i)))
+      graph.y.push(Timer.prototype.timer(reversing, generateNumberArray(i)))
       graph.x.push(i)
     };
     for (var e = 0; e < (repetitions - 1); e++) {
        for (var i = 0; i < maxArraySize; i += increments) {
-         graph.y[i/increments] += Timer.prototype.timer(reversing, generateArray(i));
+         graph.y[i/increments] += Timer.prototype.timer(reversing, generateNumberArray(i));
        };
      };
      for (var i = 0; i < graph.y.length; i ++) {
@@ -30,14 +31,14 @@
        graph.y[i] = t/repetitions
      };
 
-    var graph2 = { x: [], y: [], name: 'reversing2()' }
+    var graph2 = { x: [], y: [], name: 'reversing4()' }
     for (var i = 0; i < maxArraySize; i+= increments) {
-      graph2.y.push(Timer.prototype.timer(reversing2, generateArray(i)))
+      graph2.y.push(Timer.prototype.timer(reversing4, generateNumberArray(i)))
       graph2.x.push(i)
     };
     for (var e = 0; e < (repetitions - 1); e++) {
        for (var i = 0; i < maxArraySize; i += increments) {
-         graph2.y[i/increments] += Timer.prototype.timer(reversing2, generateArray(i));
+         graph2.y[i/increments] += Timer.prototype.timer(reversing4, generateNumberArray(i));
        };
      };
      for (var i = 0; i < graph2.y.length; i ++) {
@@ -48,12 +49,12 @@
 
     var graph3 = { x: [], y: [], name: 'reversing3()' }
     for (var i = 0; i < maxArraySize; i+= increments) {
-      graph3.y.push(Timer.prototype.timer(reversing3, generateArray(i)))
+      graph3.y.push(Timer.prototype.timer(reversing3, generateNumberArray(i)))
       graph3.x.push(i)
     };
     for (var e = 0; e < (repetitions - 1); e++) {
        for (var i = 0; i < maxArraySize; i += increments) {
-         graph3.y[i/increments] += Timer.prototype.timer(reversing3, generateArray(i));
+         graph3.y[i/increments] += Timer.prototype.timer(reversing3, generateNumberArray(i));
        };
      };
      for (var i = 0; i < graph3.y.length; i ++) {
@@ -61,14 +62,14 @@
        graph3.y[i] = t/repetitions
      };
 
-    var graph4 = { x: [], y: [], name: 'reversing4()' }
+    var graph4 = { x: [], y: [], name: 'isabelNewReverse()' }
     for (var i = 0; i < maxArraySize; i+= increments) {
-      graph4.y.push(Timer.prototype.timer(reversing4, generateArray(i)))
+      graph4.y.push(Timer.prototype.timer(isabelNewReverse, generateNumberArray(i)))
       graph4.x.push(i)
     };
     for (var e = 0; e < (repetitions - 1); e++) {
        for (var i = 0; i < maxArraySize; i += increments) {
-         graph4.y[i/increments] += Timer.prototype.timer(reversing4, generateArray(i));
+         graph4.y[i/increments] += Timer.prototype.timer(isabelNewReverse, generateNumberArray(i));
        };
      };
      for (var i = 0; i < graph4.y.length; i ++) {

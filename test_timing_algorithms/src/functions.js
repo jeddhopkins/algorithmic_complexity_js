@@ -25,7 +25,7 @@ function reversing2(arr) {
 function reversing3(arr) {
   var j = arr.length - 1
   for (var i = 0; i < arr.length; i++) {
-    if (i === j) {
+    if (i >= j) {
       break
     }
     var obj = arr[i]

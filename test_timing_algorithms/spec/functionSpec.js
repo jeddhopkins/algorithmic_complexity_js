@@ -55,6 +55,12 @@ describe('All Functions', function() {
     it('expects [1] to equal [1]', function() {
       expect(reversing([1])).toEqual([1])
     });
+    it('expects [1, 2] to equal [2, 1]', function() {
+      expect(reversing([1, 2])).toEqual([2, 1])
+    });
+    it('expects [1, 2, 3, 4, 5, 6] to equal [6, 5, 4, 3, 2, 1]', function() {
+      expect(reversing([1, 2, 3, 4, 5, 6])).toEqual([6, 5, 4, 3, 2, 1])
+    });
     it('expects [1, 2, 3, 4, 5] to equal [5, 4, 3, 2, 1]', function() {
       expect(reversing([1, 2, 3, 4, 5])).toEqual([5, 4, 3, 2, 1])
     });
@@ -73,6 +79,12 @@ describe('All Functions', function() {
     });
     it('expects [1] to equal [1]', function() {
       expect(reversing2([1])).toEqual([1])
+    });
+    it('expects [1, 2] to equal [2, 1]', function() {
+      expect(reversing2([1, 2])).toEqual([2, 1])
+    });
+    it('expects [1, 2, 3, 4, 5, 6] to equal [6, 5, 4, 3, 2, 1]', function() {
+      expect(reversing2([1, 2, 3, 4, 5, 6])).toEqual([6, 5, 4, 3, 2, 1])
     });
     it('expects [1, 2, 3, 4, 5] to equal [5, 4, 3, 2, 1]', function() {
       expect(reversing2([1, 2, 3, 4, 5])).toEqual([5, 4, 3, 2, 1])
@@ -93,6 +105,12 @@ describe('All Functions', function() {
     it('expects [1] to equal [1]', function() {
       expect(reversing3([1])).toEqual([1])
     });
+    it('expects [1, 2] to equal [2, 1]', function() {
+      expect(reversing3([1, 2])).toEqual([2, 1])
+    });
+    it('expects [1, 2, 3, 4, 5, 6] to equal [6, 5, 4, 3, 2, 1]', function() {
+      expect(reversing3([1, 2, 3, 4, 5, 6])).toEqual([6, 5, 4, 3, 2, 1])
+    });
     it('expects [1, 2, 3, 4, 5] to equal [5, 4, 3, 2, 1]', function() {
       expect(reversing3([1, 2, 3, 4, 5])).toEqual([5, 4, 3, 2, 1])
     });
@@ -111,6 +129,12 @@ describe('All Functions', function() {
     });
     it('expects [1] to equal [1]', function() {
       expect(reversing4([1])).toEqual([1])
+    });
+    it('expects [1, 2] to equal [2, 1]', function() {
+      expect(reversing4([1, 2])).toEqual([2, 1])
+    });
+    it('expects [1, 2, 3, 4, 5, 6] to equal [6, 5, 4, 3, 2, 1]', function() {
+      expect(reversing4([1, 2, 3, 4, 5, 6])).toEqual([6, 5, 4, 3, 2, 1])
     });
     it('expects [1, 2, 3, 4, 5] to equal [5, 4, 3, 2, 1]', function() {
       expect(reversing4([1, 2, 3, 4, 5])).toEqual([5, 4, 3, 2, 1])
