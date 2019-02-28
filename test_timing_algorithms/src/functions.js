@@ -48,6 +48,40 @@ function sorting(arr) {
   return arr.sort();
 };
 
+function sorting2(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    for (var j = 0; j < arr.length; j++) {
+      if (arr[j] > arr[j + 1]) {
+        var obj = arr[j]
+        arr[j] = arr[j + 1]
+        arr[j + 1] = obj
+      }
+    }
+  }
+  return arr
+}
+
+function sorting3(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    for (var j = 0; j < arr.length; j++) {
+      var arr1 = arr
+      var arr2;
+      if (arr[j] > arr[j + 1]) {
+        var obj = arr[j]
+        arr[j] = arr[j + 1]
+        arr[j + 1] = obj
+        arr2 = arr
+      }
+    }
+    console.log(arr1);
+    console.log(arr2);
+    if (arr1 == arr2) {
+      break
+    }
+  }
+  return arr
+}
+
 
 function shuffle(arr) {
   var j, x, i;

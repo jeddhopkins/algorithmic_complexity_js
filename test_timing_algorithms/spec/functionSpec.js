@@ -157,6 +157,19 @@ describe('All Functions', function() {
     });
   });
 
+  describe('sorting2', function() {
+
+    it('expects [6, 5, 1, 4, 2, 3] to equal [1, 2, 3, 4, 5, 6]', function() {
+      expect(sorting2([5, 6, 1, 4, 2, 3])).toEqual([1, 2, 3, 4, 5, 6])
+    });
+    it('expects [e, d, c, b, a] to equal [a, b, c, d, e]', function() {
+      expect(sorting2(['e', 'd', 'c', 'b', 'a'])).toEqual(['a', 'b', 'c', 'd', 'e'])
+    });
+    it('expects [1, 11, 2, 22, 3, 33] to equal [1, 2, 3, 11, 22, 33]', function() {
+      expect(sorting2([1, 11, 2, 22, 3, 33])).toEqual([1, 2, 3, 11, 22, 33])
+    });
+  });
+
   describe('shuffle', function() {
 
     it('expects [1, 2, 3, 4] to be a shuffled variation', function() {
@@ -182,4 +195,19 @@ describe('All Functions', function() {
       expect(duplicates([2, 5, 10, 100, 1, 11])).toEqual([])
     })
   })
+
+//   describe('binarySort', function() {
+//     it('expects [] to equal []', function() {
+//       expect(binarySort([])).toEqual([])
+//     });
+//     it('expects [1] to equal [1]', function() {
+//       expect(binarySort([1])).toEqual([1])
+//     });
+//     it('expects [1, 0] to equal [0, 1]', function() {
+//       expect(binarySort([1, 2])).toEqual([2, 1])
+//     });
+//     it('expects [1, 1, 1, 0, 0, 0] to equal [0, 0, 0, 1, 1, 1]', function() {
+//       expect(binarySort([1, 1, 1, 0, 0, 0])).toEqual([0, 0, 0, 1, 1, 1])
+//     });
+//   });
 })
