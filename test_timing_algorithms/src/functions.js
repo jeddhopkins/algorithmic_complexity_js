@@ -22,7 +22,7 @@ function reversing2(arr) {
   return newArr;
 }
 
-function reversing3(arr) {
+function jeddReversing(arr) {
   var j = arr.length - 1
   for (var i = 0; i < arr.length; i++) {
     if (i >= j) {
@@ -61,35 +61,13 @@ function sorting2(arr) {
   return arr
 }
 
-function sorting3(arr) {
-  for (var i = 0; i < arr.length; i++) {
-    for (var j = 0; j < arr.length; j++) {
-      var arr1 = arr
-      var arr2;
-      if (arr[j] > arr[j + 1]) {
-        var obj = arr[j]
-        arr[j] = arr[j + 1]
-        arr[j + 1] = obj
-        arr2 = arr
-      }
-    }
-    console.log(arr1);
-    console.log(arr2);
-    if (arr1 == arr2) {
-      break
-    }
-  }
-  return arr
-}
-
-
 function shuffle(arr) {
   var j, x, i;
   for (i = arr.length - 1; i > 0; i--) {
-      j = Math.floor(Math.random() * (i + 1));
-      x = arr[i];
-      arr[i] = arr[j];
-      arr[j] = x;
+    j = Math.floor(Math.random() * (i + 1));
+    x = arr[i];
+    arr[i] = arr[j];
+    arr[j] = x;
   }
   return arr;
 }

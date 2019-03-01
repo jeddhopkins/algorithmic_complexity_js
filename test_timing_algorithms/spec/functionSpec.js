@@ -97,28 +97,28 @@ describe('All Functions', function() {
     });
   });
 
-  describe('reversing3', function() {
+  describe('jeddReversing()', function() {
 
     it('expects [] to equal []', function() {
-      expect(reversing3([])).toEqual([])
+      expect(jeddReversing([])).toEqual([])
     });
     it('expects [1] to equal [1]', function() {
-      expect(reversing3([1])).toEqual([1])
+      expect(jeddReversing([1])).toEqual([1])
     });
     it('expects [1, 2] to equal [2, 1]', function() {
-      expect(reversing3([1, 2])).toEqual([2, 1])
+      expect(jeddReversing([1, 2])).toEqual([2, 1])
     });
     it('expects [1, 2, 3, 4, 5, 6] to equal [6, 5, 4, 3, 2, 1]', function() {
-      expect(reversing3([1, 2, 3, 4, 5, 6])).toEqual([6, 5, 4, 3, 2, 1])
+      expect(jeddReversing([1, 2, 3, 4, 5, 6])).toEqual([6, 5, 4, 3, 2, 1])
     });
     it('expects [1, 2, 3, 4, 5] to equal [5, 4, 3, 2, 1]', function() {
-      expect(reversing3([1, 2, 3, 4, 5])).toEqual([5, 4, 3, 2, 1])
+      expect(jeddReversing([1, 2, 3, 4, 5])).toEqual([5, 4, 3, 2, 1])
     });
     it('expects [a, b, c, d, e] to equal [e, d, c, b, a]', function() {
-      expect(reversing3(['a', 'b', 'c', 'd', 'e'])).toEqual(['e', 'd', 'c', 'b', 'a'])
+      expect(jeddReversing(['a', 'b', 'c', 'd', 'e'])).toEqual(['e', 'd', 'c', 'b', 'a'])
     });
     it('expects [22, null, hi] to equal [hi, null, 22]', function() {
-      expect(reversing3([22, null, 'hi'])).toEqual(['hi', null, 22])
+      expect(jeddReversing([22, null, 'hi'])).toEqual(['hi', null, 22])
     });
   });
 
